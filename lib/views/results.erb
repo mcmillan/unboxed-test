@@ -1,0 +1,19 @@
+<p>
+  <% if !@user.valid? %>
+    That doesn't look like a valid GitHub username – only alphanumeric characters and hyphens are allowed.
+  <% elsif !@user.exists? %>
+    Hmm – it appears that <%= @user.username %> isn't a user that exists on GitHub.
+  <% elsif !@user.repos? %>
+    No can do – it looks like <%= @user.username %> doesn't have any GitHub repositories.
+  <% elsif !@user.favourite_language_determinable? %>
+    It doesn't seem possible to figure out <%= @user.username %>'s favourite language – it seems like they're a fan of
+    <%= @user.languages.uniq.join(' and ') %> in equal measure!
+  <% else %>
+    It looks like <%= @user.username %>'s favourite programming language is
+    <strong><%= @user.favourite_language %></strong>.
+  <% end %>
+</p>
+
+<p>
+  <a href="/">Someone else?</a>
+</p>
