@@ -15,6 +15,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    puma (3.6.0)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
@@ -52,11 +53,15 @@ PLATFORMS
 DEPENDENCIES
   httparty (~> 0.14.0)
   pry
+  puma (~> 3.6.0)
   rspec
   shotgun
   sinatra (~> 1.4.7)
   vcr
   webmock
 
+RUBY VERSION
+   ruby 2.3.1p112
+
 BUNDLED WITH
-   1.12.1
+   1.12.5
