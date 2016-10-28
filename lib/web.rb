@@ -11,3 +11,7 @@ post '/' do
   @user = User.new(params[:username])
   erb :results
 end
+
+get '/horse' do
+  erb :horse, layout: nil
+end
